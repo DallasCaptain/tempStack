@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete A belt</title>
+</head>
+<body>
+    <% for (let x of belts) { %>
+        <h1><%= x.id %></h1>
+        <form action="/belt/<%= x.id %>/delete" method="POST">
+            <input type="submit" value="DELETE ME">
+        </form>
+    <% } %>
+    
+</body>
+</html>
