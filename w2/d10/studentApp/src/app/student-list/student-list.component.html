@@ -1,0 +1,11 @@
+<app-student (click)='levelup($event)' *ngFor="let student of students" [student]='student'></app-student>
+
+
+<form (submit)="onSubmit()">
+    Name<input type="text" name="name" [(ngModel)]="newStudent.name" />
+    Color<input type="text" name="favColor" [(ngModel)]="newStudent.favColor" />
+    <input type="submit" value="Create Student" />
+
+</form>
+
+<button (click)="showbind()">show bind</button>
