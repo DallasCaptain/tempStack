@@ -38,7 +38,7 @@ export class StudentListComponent implements OnInit {
       favColor:'',
       level:0
     }
-    http.subscribe(http.get('/students').subscribe(this.students))
+    
   }
 
   showbind(){

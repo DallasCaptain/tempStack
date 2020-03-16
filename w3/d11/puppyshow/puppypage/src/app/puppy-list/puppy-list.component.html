@@ -1,0 +1,9 @@
+<h1>Here are our pupps</h1>
+<div *ngIf='showBig'>
+    <app-puppy *ngFor="let pup of bigpups" [puppy]='pup'></app-puppy>
+
+</div>
+<div *ngIf='!showBig'>
+    <app-puppy  *ngFor="let pup of lilpups" [puppy]='pup'></app-puppy>
+</div>
+    
