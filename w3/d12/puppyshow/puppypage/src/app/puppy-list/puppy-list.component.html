@@ -1,0 +1,16 @@
+
+
+
+<button (click)="showBig()" [routerLink]="['bigpups']">Big Puppies</button>
+<button (click)="showSmall()" [routerLink]="['lilpups']">Little Puppies</button>
+<hr>
+<img src="assets/puppy.jpg" alt="cute puppy">
+<div *ngIf='showbig'>
+    <app-puppy *ngFor="let pup of bigpups" [puppy]='pup'></app-puppy>
+
+</div>
+<div *ngIf='!showbig'>
+    <app-puppy  *ngFor="let pup of lilpups" [puppy]='pup'></app-puppy>
+</div>
+
+

@@ -1,0 +1,12 @@
+<form (submit)='createhat()'>
+  <label>Color:</label>
+  <input type = 'text' name='color' [(ngModel)]='newhat.color' placeholder='color'>
+  <label>Price:</label>
+  <input type = 'text' name='price' [(ngModel)]='newhat.price' placeholder='price'>
+  <label>Stock:</label>
+  <input type = 'text' name='stock' [(ngModel)]='newhat.stock' placeholder='new stock number'>
+  <label>Url:</label>
+  <input type = 'text' name='url' [(ngModel)]='newhat.url' placeholder='image url'>
+
+  <input type = 'submit' value='Submit hat'>
+</form>
