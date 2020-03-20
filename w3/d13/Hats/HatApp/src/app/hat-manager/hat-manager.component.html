@@ -1,2 +1,17 @@
 <app-hat [hat]='hattoshow' ></app-hat>
 <button (click)='addtocart()'>Add to Cart</button>
+<button (click)='removehat()'>Delete</button>
+<button (click)='showUpdate()'>Toggle Update Form</button>
+
+<form *ngIf='showupdate' (submit)='updateHat()'>
+  <label>Color:</label>
+  <input type = 'text' name='color' [(ngModel)]='hattoshow.color' placeholder='color'>
+  <label>Price:</label>
+  <input type = 'text' name='price' [(ngModel)]='hattoshow.price' placeholder='price'>
+  <label>Stock:</label>
+  <input type = 'text' name='stock' [(ngModel)]='hattoshow.stock' placeholder='new stock number'>
+  <label>Url:</label>
+  <input type = 'text' name='url' [(ngModel)]='hattoshow.url' placeholder='image url'>
+
+  <input type = 'submit' value='Submit hat'>
+</form>

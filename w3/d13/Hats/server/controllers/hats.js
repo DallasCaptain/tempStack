@@ -49,13 +49,51 @@ module.exports = {
         .then(hat => {
             res.json(hat)
         })
+        .catch(err => {
+            res.json({
+                message:'error',
+                error: err
+            })
+        })
     },
     
     update: function(req, res) {
-        //update a specific hat
+        Hat.findOne({_id: req.body._id})
+        .then(oldHat =>{
+            oldHat.color = req.body.color;
+            oldHat.price = req.body.price;
+            oldHat.stock = req.body.stock;
+            oldHat.url = req.body.url;
+            oldHat.save()
+            .then(hat =>{
+                res.json({
+                    message:'success',
+                    hat:hat
+                })
+            })
+        })
+        .catch(err => {
+            res.json({
+                message:'error',
+                error: err
+            })
+        })
     },
     destroy: function(req, res) {
-    	// remove a hat
+        console.log('destroying', req.params.id)
+        Hat.deleteOne({_id: req.params.id})
+        .then(data =>{
+            res.json({
+                'message':'success',
+                'data':data
+            })
+        })
+        .catch(err => {
+            res.json({
+                message:'error',
+                error: err
+            })
+        })
     },
 
     //angular made these useless

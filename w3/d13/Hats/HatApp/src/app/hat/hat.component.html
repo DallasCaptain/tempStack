@@ -1,1 +1,5 @@
-<img [routerLink]="['/hat/1']" src='{{imgurl}}' alt='fancy hat'>
+<img src='{{hat.url}}' alt='fancy hat'>
+<table>
+  <tr><th>Color</th><th>Price</th><th>Stock</th></tr>
+  <tr><td>{{hat.color}}</td><td>{{hat.price}}</td><td>{{hat.stock}}</td></tr>
+</table>

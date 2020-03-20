@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HttpService } from './http.service';
 import { HttpClientModule } from '@angular/common/http';
+import { HatGridComponent } from './hat-grid/hat-grid.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { HttpClientModule } from '@angular/common/http';
     HatCarouselComponent,
     HatManagerComponent,
     NewhatComponent,
-    NavbarComponent
+    NavbarComponent,
+    HatGridComponent
   ],
   imports: [
     BrowserModule,

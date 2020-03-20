@@ -1,1 +1,5 @@
-<app-hat *ngFor='let hat of top3' [hat]='hat'>
+<div *ngFor='let hat of top3'>
+  <app-hat  [hat]='hat'></app-hat>
+  <button [routerLink]="['/hats/'+hat._id]">View Hat</button>
+</div>
+

@@ -15,7 +15,9 @@ export class HatCarouselComponent implements OnInit {
   ngOnInit() {
 
     this.top3=[]
+
     this._httpService.allhats().subscribe(data => {
+      // @ts-ignore
       this.allhats = data.hats;
       for(let i = 0; i < this.allhats.length && i < 3; i++){
       this.top3.push(this.allhats[i])
